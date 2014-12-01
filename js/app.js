@@ -1,13 +1,18 @@
 
 "use strict";
 
+/*
+* University of Washington, Seattle WA
+* Seattle University, Seattle WA
+ */
+
 $(document).ready(function() {
     var map;
     var geocoder;
     var directionsDisplay;
     var directionsService = new google.maps.DirectionsService();
-    var addr1 = 'University of Washington, Seattle, WA';
-    var addr2 = "Seattle University, Seattle, WA";
+    var addr1;
+    var addr2;
     var mode;
     var mapElem = document.getElementById('map');
     var center = {
@@ -22,6 +27,8 @@ $(document).ready(function() {
     //This should be done in the initialize function
     $("#calculate").click(function() {
         initialize();
+        addr1 = $("#startaddress").val();
+        addr2 = $("#endaddress").val();
         placeMarkers();
         calcRoute();
         calculateDistances();
@@ -40,6 +47,8 @@ $(document).ready(function() {
         geocoder = new google.maps.Geocoder();
         directionsDisplay.setMap(map);
         mode = "DRIVING";
+        addr1 = "";
+        addr2 = "";
     }
 
     function placeMarkers() {
@@ -121,6 +130,6 @@ $(document).ready(function() {
         var total = (result / 1609.344);
         var value = total.toFixed(2);
         var emissions = document.getElementById('emissions');
-        emissions.innerHTML = "Total emissions: " + value;
+        emissions.innerHTML = "Total emissions: " + value + " pounds";
     }
 });

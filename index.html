@@ -16,10 +16,25 @@
 <div id="map"></div>
 
 <div>
-    <button type="button" class="btn btn-default" id ="calculate">Calculate!</button>
-    <div id="outputDiv"></div>
-    <div id="emissions"></div>
+    <div class="emission-form">
+
+            <div>
+                <label for="startaddress">Start Address</label>
+                <input type="text" id="startaddress"
+                       placeholder="Enter the address of your start position">
+            </div>
+            <div>
+                <label for="endaddress">Destination Address</label>
+                <input type="text" id="endaddress"
+                       placeholder="Enter the valid address of your destination">
+            </div>
+            <button type="button" class="btn btn-default" id="calculate">Calculate</button>
+
+        <div id="outputDiv"></div>
+        <div id="emissions"></div>
+    </div>
 </div>
+
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVmMyBekZIbbkVhPtboFc8jQ66yCAs-rY"></script>
 <script src="https://maps.googleapis.com/maps/api/js"></script>

@@ -6,7 +6,8 @@ body, input {
 
 #map {
     height: 800px;
-    margin: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
     padding: 0;
 }
 
@@ -14,7 +15,12 @@ input {
     width: 100%;
 }
 
-.address-form {
+.emission-form {
     padding: 1em;
-    margin: 1em;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+#calculate {
+    vertical-align: middle;
 }
